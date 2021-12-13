@@ -8,22 +8,20 @@ module.exports = {
     'truffle-plugin-verify'
   ],
   api_keys: {
-    oklink: "",
-    bscscan: "",
-    etherscan: ""
+    polygonscan: "ECMVDG146CKEV592Z3YSDRZAZSG8W7S9H9"
   },
   networks: {
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://exchaintestrpc.okex.org`),
-      network_id: 65,
-      confirmations: 10,
+      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.matic.today`),
+      network_id: 80001,
+      confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
     },
     mainnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://exchainrpc.okex.org`),
-      network_id: 66,
-      confirmations: 10,
+      provider: () => new HDWalletProvider(mnemonic, `https://polygon-rpc.com`),
+      network_id: 137,
+      confirmations: 2,
       timeoutBlocks: 200,
       production: true
     }
